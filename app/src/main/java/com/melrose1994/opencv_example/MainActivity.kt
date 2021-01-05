@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.TextureView
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
 
         show()
+
     }
 
 
@@ -30,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         val result = Bitmap.createBitmap(w,h,Bitmap.Config.RGB_565)
         result.setPixels(resultPixes, 0, w, 0, 0,w, h)
         findViewById<ImageView>(R.id.ivDest).setImageBitmap(result)
-
 
     }
 
