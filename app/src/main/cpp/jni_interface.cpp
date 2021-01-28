@@ -1,24 +1,63 @@
 #include "jni_interface.h"
 
+
 extern "C"
-JNIEXPORT jintArray JNICALL
-Java_com_melrose1994_opencv_1example_OpenCv_gray(JNIEnv *env, jclass clazz, jintArray buf,
-                                                 jint width, jint height)
+JNIEXPORT jboolean JNICALL
+Java_com_melrose1994_opencv_1example_OpenCvBitmap_gray(JNIEnv *env, jclass clazz, jobject src, jobject dest)
 {
-   jint * c_buf =env->GetIntArrayElements(buf,JNI_FALSE);
-    Mat imgData(height, width, CV_8UC4, (unsigned char *) c_buf);
-    uchar* ptr = imgData.ptr(0);
-    for(int i = 0; i < width*height; i ++){
-        //计算公式：Y(亮度) = 0.299*R + 0.587*G + 0.114*B
-        // 对于一个int四字节，其彩色值存储方式为：BGRA
-        int grayScale = (int)(ptr[4*i+2]*0.299 + ptr[4*i+1]*0.587 + ptr[4*i+0]*0.114);
-        ptr[4*i+1] = grayScale;
-        ptr[4*i+2] = grayScale;
-        ptr[4*i+0] = grayScale;
+    Mat source,dst;
+    if (lock_bitmap_pixels(env,src,dest,&source,&dst)){
+        Mat grayMat;
+        cvtColor(source, grayMat, CV_BGRA2GRAY);
+        cvtColor(grayMat, dst, CV_GRAY2BGRA);
+        unlock_bitmap_pixels(env,src,dest);
+        return true;
     }
-    int size = width * height;
-    jintArray result = env->NewIntArray(size);
-    env->SetIntArrayRegion(result, 0, size, c_buf);
-    env->ReleaseIntArrayElements(buf, c_buf, 0);
-    return result;
+    return false;
 }
+
+
+
+extern "C"
+JNIEXPORT jboolean JNICALL
+Java_com_melrose1994_opencv_1example_OpenCvBitmap_debug(JNIEnv *env, jclass clazz, jobject src, jobject dest)
+{
+    Mat source,dst;
+    if (lock_bitmap_pixels(env,src,dest,&source,&dst)){
+
+        //gray_read_pixel(source,dst);
+
+
+
+        bgr_read_pixel(source,dst);
+
+        unlock_bitmap_pixels(env,src,dest);
+        return true;
+    }
+    return false;
+}
+
+bool lock_bitmap_pixels(JNIEnv *env,jobject &src ,jobject &dest,Mat *source,Mat *dst)
+{
+    AndroidBitmapInfo bitmapInfo;
+    void * bitmapPixels;
+    void * destBitmapPixels;
+    if (AndroidBitmap_getInfo(env,src,&bitmapInfo)>=0
+        &&AndroidBitmap_lockPixels(env,src,&bitmapPixels)>=0&&AndroidBitmap_lockPixels(env,dest,&destBitmapPixels)>=0){
+        *source = Mat(bitmapInfo.width,bitmapInfo.height,CV_8UC4,bitmapPixels);
+        *dst = Mat(bitmapInfo.width,bitmapInfo.height,CV_8UC4,destBitmapPixels);
+        return true;
+    }
+
+    return false;
+}
+
+
+
+
+void unlock_bitmap_pixels(JNIEnv *env,jobject &src ,jobject &dest)
+{
+    AndroidBitmap_unlockPixels(env,src);
+    AndroidBitmap_unlockPixels(env,dest);
+}
+

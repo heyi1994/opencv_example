@@ -21,8 +21,12 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
+
+             cv_pixel.h
              jni_interface.cpp
              jni_interface.h
+             cv_pixel.cpp
+
         )
 
 #导入头文件
@@ -54,6 +58,9 @@ target_link_libraries( # Specifies the target library.
 
                        #添加opencv_java4
                        opencv_java4
+
+                       # bitmap
+                       jnigraphics
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib}

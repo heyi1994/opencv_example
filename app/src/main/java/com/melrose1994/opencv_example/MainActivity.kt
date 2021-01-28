@@ -2,37 +2,45 @@ package com.melrose1994.opencv_example
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.view.TextureView
+import android.util.Log
 import android.widget.ImageView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
+    private  val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        show()
 
+
+        show()
     }
+
+
 
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun show(){
-        val bitmap = (resources.getDrawable(R.drawable.ic_pic) as BitmapDrawable).bitmap
-        val w = bitmap.width
-        val h = bitmap.height
-        val pix =IntArray(w*h)
-        bitmap.getPixels(pix, 0, w, 0, 0, w, h)
+        val bitmap = BitmapFactory.decodeResource(
+            resources,
+            R.drawable.ic_pic,
+            BitmapFactory.Options().apply {
+                inPreferredConfig = Bitmap.Config.ARGB_8888
+            })
         findViewById<ImageView>(R.id.ivSrc).setImageBitmap(bitmap)
-        val resultPixes = OpenCv.gray(pix,w,h)
-        val result = Bitmap.createBitmap(w,h,Bitmap.Config.RGB_565)
-        result.setPixels(resultPixes, 0, w, 0, 0,w, h)
-        findViewById<ImageView>(R.id.ivDest).setImageBitmap(result)
-
+        val new = Bitmap.createBitmap(bitmap.width, bitmap.height, Bitmap.Config.ARGB_8888)
+        val before = System.currentTimeMillis()
+        if (OpenCvBitmap.debug(bitmap, new)){
+            val after = System.currentTimeMillis()
+            Log.d(TAG, "take time : ${after - before} ms")
+            findViewById<ImageView>(R.id.ivDest).setImageBitmap(new)
+        }
     }
+
 
 }
