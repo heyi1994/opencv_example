@@ -3,6 +3,7 @@ package com.melrose1994.opencv_example
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageFormat
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        show()
+        composite()
     }
 
 
@@ -26,21 +27,40 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun show(){
-        val bitmap = BitmapFactory.decodeResource(
-            resources,
-            R.drawable.ic_pic,
-            BitmapFactory.Options().apply {
-                inPreferredConfig = Bitmap.Config.ARGB_8888
-            })
-        findViewById<ImageView>(R.id.ivSrc).setImageBitmap(bitmap)
-        val new = Bitmap.createBitmap(bitmap.width, bitmap.height, Bitmap.Config.ARGB_8888)
+
+        val bitmap = createArgbBitmap(R.drawable.ic_pic)
+        showBitmap(bitmap)
+        val new = bitmap.clone()
         val before = System.currentTimeMillis()
         if (OpenCvBitmap.debug(bitmap, new)){
             val after = System.currentTimeMillis()
             Log.d(TAG, "take time : ${after - before} ms")
-            findViewById<ImageView>(R.id.ivDest).setImageBitmap(new)
+            showBitmap(new)
         }
     }
+
+
+
+
+
+    private fun composite(){
+        val bitmap =  createArgbBitmap(R.drawable.ic_pic_1)
+        val bitmap2 =  createArgbBitmap(R.drawable.ic_pic_2)
+        val dest = bitmap.clone()
+
+        if (OpenCvBitmap.composite(bitmap, bitmap2, dest)){
+            showBitmap(dest)
+        }
+    }
+
+
+
+
+
+
+
+    private fun showBitmap(bitmap: Bitmap) = findViewById<ImageView>(R.id.ivDest).setImageBitmap(bitmap)
+
 
 
 }

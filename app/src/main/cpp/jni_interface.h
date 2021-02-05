@@ -12,6 +12,8 @@ using namespace cv;
 
 #include "android/log.h"
 #include "cv_pixel.h"
+#include "utils/utils.h"
+#include "composite/cv_composite.h"
 #define LOG_TAG "Melrose"
 #define LOG_I(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 #define LOG_W(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__)
@@ -27,8 +29,12 @@ JNIEXPORT jboolean JNICALL
 Java_com_melrose1994_opencv_1example_OpenCvBitmap_debug(JNIEnv *env, jclass clazz, jobject src, jobject bitmap);
 
 
-bool lock_bitmap_pixels(JNIEnv *env,jobject &src ,jobject &dest,Mat *source,Mat *dst);
-void unlock_bitmap_pixels(JNIEnv *env,jobject &src ,jobject &dest);
+extern "C"
+JNIEXPORT jboolean JNICALL
+Java_com_melrose1994_opencv_1example_OpenCvBitmap_composite(JNIEnv *env, jclass clazz,
+                                                            jobject bitmap, jobject bitmap2,
+                                                            jobject dest);
 
-void test();
+
+
 #endif //OPENCV_EXAMPLE_JNI_INTERFACE_H

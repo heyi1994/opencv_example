@@ -23,9 +23,14 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
 
              cv_pixel.h
+             composite/cv_composite.h
              jni_interface.cpp
              jni_interface.h
              cv_pixel.cpp
+             composite/cv_composite.cpp
+
+             utils/utils.cpp
+             utils/utils.h
 
         )
 
