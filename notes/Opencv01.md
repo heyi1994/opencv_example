@@ -25,7 +25,7 @@ void addWeighted(InputArray src1, double alpha, InputArray src2,
 
  > 注意: 两张图片的大小和类型必须要一致才可以
 
- [cv_composite.h](app/src/main/cpp/composite/cv_composite.h)代码如下:
+ [cv_composite.h](../app/src/main/cpp/composite/cv_composite.h)代码如下:
 
  ```c++
  void composite(Mat &img,Mat &img2,Mat &dest)
