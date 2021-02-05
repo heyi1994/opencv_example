@@ -65,7 +65,10 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "com.louiscad.splitties:splitties-fun-pack-android-base:$splitties_version"
+    implementation "com.louiscad.splitties:splitties-views-dsl-ide-preview:$splitties_version"
+    implementation "com.louiscad.splitties:splitties-views-dsl-recyclerview:$splitties_version"
+    implementation "com.louiscad.splitties:splitties-views-dsl-material:$splitties_version"
+
 }

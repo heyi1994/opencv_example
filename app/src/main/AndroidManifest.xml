@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.melrose1994.opencv_example">
+    package="com.melrose1994.opencv">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -11,13 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Opencv_example">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.melrose1994.opencv.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+        <activity android:name="com.melrose1994.opencv.ui.contrast.ContrastActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+
+
     </application>
 
 </manifest>

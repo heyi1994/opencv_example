@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">opencv_example</string>
+
+    <string name="activity_contrast_contrast">调整对比度和亮度</string>
 </resources>

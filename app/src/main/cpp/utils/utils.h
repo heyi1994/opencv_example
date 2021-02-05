@@ -4,6 +4,7 @@
 
 #ifndef OPENCV_EXAMPLE_UTILS_H
 #define OPENCV_EXAMPLE_UTILS_H
+
 #include <jni.h>
 #include <android/bitmap.h>
 #include "opencv2/opencv.hpp"
@@ -11,13 +12,11 @@
 using namespace cv;
 
 #include "android/log.h"
-#define LOG_TAG "Melrose"
+
+
 #define LOG_I(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 #define LOG_W(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__)
 #define LOG_D(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
-
-
-
 /**
  *  bitmap转mat ，会lock bitmap的pixels, 4通道 bgra ;
  * @param src bitmap obj

@@ -3,7 +3,7 @@
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_melrose1994_opencv_1example_OpenCvBitmap_gray(JNIEnv *env, jclass clazz, jobject src, jobject dest)
+Java_com_melrose1994_opencv_OpenCvBitmap_gray(JNIEnv *env, jclass clazz, jobject src, jobject dest)
 {
     Mat source,dst;
     if (lock_bitmap_pixels(env,src,dest,&source,&dst)){
@@ -21,7 +21,7 @@ Java_com_melrose1994_opencv_1example_OpenCvBitmap_gray(JNIEnv *env, jclass clazz
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_melrose1994_opencv_1example_OpenCvBitmap_debug(JNIEnv *env, jclass clazz, jobject src, jobject dest)
+Java_com_melrose1994_opencv_OpenCvBitmap_debug(JNIEnv *env, jclass clazz, jobject src, jobject dest)
 {
     Mat source,dst;
     if (lock_bitmap_pixels(env,src,dest,&source,&dst)){
@@ -44,7 +44,7 @@ Java_com_melrose1994_opencv_1example_OpenCvBitmap_debug(JNIEnv *env, jclass claz
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_melrose1994_opencv_1example_OpenCvBitmap_composite(JNIEnv *env, jclass clazz,jobject bitmap, jobject bitmap2,jobject dest)
+Java_com_melrose1994_opencv_OpenCvBitmap_composite(JNIEnv *env, jclass clazz,jobject bitmap, jobject bitmap2,jobject dest)
 {
   Mat img1,img2,show;
   if (bitmap2mat(env,bitmap,img1)&&bitmap2mat(env,bitmap2,img2)&&bitmap2mat(env,dest,show)){
@@ -60,4 +60,3 @@ Java_com_melrose1994_opencv_1example_OpenCvBitmap_composite(JNIEnv *env, jclass 
 
     return false;
 }
-

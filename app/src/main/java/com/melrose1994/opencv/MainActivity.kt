@@ -1,13 +1,13 @@
-package com.melrose1994.opencv_example
+package com.melrose1994.opencv
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.ImageFormat
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.melrose1994.opencv.ui.contrast.ContrastActivity
+import splitties.activities.start
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        composite()
+        //composite()
+
+        start<ContrastActivity>()
     }
 
 
@@ -47,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         val bitmap =  createArgbBitmap(R.drawable.ic_pic_1)
         val bitmap2 =  createArgbBitmap(R.drawable.ic_pic_2)
         val dest = bitmap.clone()
-
         if (OpenCvBitmap.composite(bitmap, bitmap2, dest)){
             showBitmap(dest)
         }

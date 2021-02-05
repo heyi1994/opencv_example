@@ -1,4 +1,4 @@
-package com.melrose1994.opencv_example
+package com.melrose1994.opencv
 
 import android.graphics.Bitmap
 
@@ -17,8 +17,7 @@ object OpenCvBitmap {
      * @param src 需要进行灰度处理的bitmap ;
      * @param newBitmap 显示的bitmap ;
      */
-    @JvmStatic
-    external fun gray(src:Bitmap,newBitmap:Bitmap):Boolean
+    @JvmStatic external fun gray(src:Bitmap,newBitmap:Bitmap):Boolean
 
 
     /**
@@ -27,15 +26,12 @@ object OpenCvBitmap {
      * @param bitmap2 图片2 ;
      * @param dest 显示的bitmap ;
      */
-    @JvmStatic
-    external fun composite(bitmap: Bitmap,bitmap2: Bitmap,dest:Bitmap):Boolean
+    @JvmStatic external fun composite(bitmap: Bitmap,bitmap2: Bitmap,dest:Bitmap):Boolean
 
 
 
 
-    @JvmStatic
-    external fun debug(src:Bitmap,newBitmap:Bitmap):Boolean
-
+    @JvmStatic external fun debug(src:Bitmap,newBitmap:Bitmap):Boolean
 
 
 

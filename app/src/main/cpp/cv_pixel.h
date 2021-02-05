@@ -4,18 +4,9 @@
 //
 #ifndef OPENCV_EXAMPLE_CV_PIXEL_H
 #define OPENCV_EXAMPLE_CV_PIXEL_H
-#include <jni.h>
-#include <android/bitmap.h>
-#include "opencv2/opencv.hpp"
-#include <opencv2/imgproc/types_c.h>
-using namespace cv;
 
-#include "android/log.h"
+#include "lib_headers.h"
 #define LOG_TAG "Melrose_pixel"
-#define LOG_I(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
-#define LOG_W(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__)
-#define LOG_D(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
-
 
 
 /**
