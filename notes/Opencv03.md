@@ -96,6 +96,7 @@ void bilateralFilter( InputArray src, OutputArray dst, int d,double sigmaColor, 
  - sigmaColor : 决定多少差值之内的像素会被计算 ;
  - sigmaSpace : 如果d的值大于0则声明无效，否则根据它的值来计算d值
 
+### 整体效果
 
-![avatar](../images/blur4.jpg)
+![avatar](../images/blur4.png)
 
