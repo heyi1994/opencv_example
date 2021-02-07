@@ -14,9 +14,11 @@
 #### 模糊原理
 
  - 归一化和值滤波(均值滤波)
+
 ![avatar](../images/blur1.png)
 
  - 高斯滤波
+
 ![avatar](../images/blur2.png)
 
 ### OpenCv中的点和颜色
