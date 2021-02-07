@@ -2,4 +2,10 @@
     <string name="app_name">opencv_example</string>
 
     <string name="activity_contrast_contrast">调整对比度和亮度</string>
+    <string name="activity_add_text">图片模糊</string>
+    <string name="activity_blur_1">均值模糊:</string>
+    <string name="activity_blur">原图:</string>
+    <string name="activity_blur_2">高斯模糊:</string>
+    <string name="activity_blur_3">中值模糊:</string>
+    <string name="activity_blur_4">双边模糊:</string>
 </resources>

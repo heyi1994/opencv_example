@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.melrose1994.opencv.ui.contrast.ContrastActivity
+import com.melrose1994.opencv.ui.blur.BlurActivity
 import splitties.activities.start
 
 
@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         //composite()
 
-        start<ContrastActivity>()
+        //start<ContrastActivity>()
+        start<BlurActivity>()
     }
 
 

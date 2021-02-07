@@ -23,6 +23,9 @@
 
         <activity android:name="com.melrose1994.opencv.ui.contrast.ContrastActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
 
+        <!--图像模糊-->
+        <activity android:name="com.melrose1994.opencv.ui.blur.BlurActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+
 
     </application>
 

@@ -7,7 +7,6 @@
 
 //对比度和亮度的调整
 #include "../../lib_headers.h"
-#define LOG_TAG "Melrose_contrast"
 
 
 

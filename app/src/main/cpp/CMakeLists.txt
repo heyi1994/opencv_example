@@ -34,6 +34,9 @@ add_library( # Sets the name of the library.
              effects/contrast/cv_contrast.cpp
              effects/contrast/cv_contrast.h
 
+             effects/blur/cv_blur.h
+             effects/blur/cv_blur.cpp
+
              utils/utils.cpp
              utils/utils.h
 
@@ -66,8 +69,8 @@ find_library( # Sets the name of the path variable.
 target_link_libraries( # Specifies the target library.
                        opencv
 
-                       #添加opencv_java4
-                       opencv_java4
+                       #添加opencv_java3
+                       opencv_java3
 
                        # bitmap
                        jnigraphics

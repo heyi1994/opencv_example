@@ -6,7 +6,6 @@
 #define OPENCV_EXAMPLE_CV_PIXEL_H
 
 #include "lib_headers.h"
-#define LOG_TAG "Melrose_pixel"
 
 
 /**

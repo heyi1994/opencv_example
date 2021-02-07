@@ -37,7 +37,6 @@ void bgr_read_pixel(Mat & src,Mat &dest)
     //通道数 ;
     size_t  channels = bgr.channels();
 
-    LOG_D("channels %d",channels);
 
     for (int row = 0; row < height; ++row) {
         for (int col = 0; col < width; ++col) {

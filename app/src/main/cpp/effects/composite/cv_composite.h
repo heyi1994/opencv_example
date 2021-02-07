@@ -7,7 +7,6 @@
 
 //图像混合
 #include "../../lib_headers.h"
-#define LOG_TAG "Melrose_composite"
 
 /**
  * 将两张图片混合 ;

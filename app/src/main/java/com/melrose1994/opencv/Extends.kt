@@ -5,6 +5,7 @@ import android.app.Activity
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import androidx.annotation.DrawableRes
@@ -23,7 +24,6 @@ fun Activity.createArgbBitmap(@DrawableRes id:Int) = BitmapFactory.decodeResourc
 
 
 fun Bitmap.clone()= Bitmap.createBitmap(width, height, config)
-
 
 
 
