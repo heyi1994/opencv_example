@@ -5,6 +5,6 @@
 
  - [图像对比度亮度调整](notes/Opencv02.md)
 
- - [图像模糊1](notes/Opencv03.md)
+ - [图像模糊](notes/Opencv03.md)
 
   

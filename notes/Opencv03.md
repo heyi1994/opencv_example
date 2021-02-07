@@ -5,7 +5,7 @@
 ### 基本知识
 
   Smooth/Blur是图像中最简单的和常用的操作之一，使用该操作的原因之一是为了给图像预处理时降低噪点，其背后就是数学的卷积计算。通常这些卷积算子计算都是线性操作，所以又叫线性滤波。下面是均值滤波过错：
-![avatar](images/blur.png)
+![avatar](../images/blur.png)
 
   假如有6x6的图像像素点矩阵。
   卷积过程：6x6上面是个3x3的窗口,从左到右，从上向下移动，黄色的每个像素点值之和取平均值赋给中心红色像素作为它卷积处理之后的新的像素值。每次平移一个像素格。在处理完成一行后，向下移动处理第二行。如果用
@@ -14,10 +14,10 @@
 #### 模糊原理
 
  - 归一化和值滤波(均值滤波)
-![avatar](images/blur1.png)
+![avatar](../images/blur1.png)
 
  - 高斯滤波
-![avatar](images/blur2.png)
+![avatar](../images/blur2.png)
 
 ### OpenCv中的点和颜色
 
@@ -70,7 +70,7 @@ void GaussianBlur( InputArray src, OutputArray dst, Size ksize,double sigmaX, do
 
   中值滤波是统计排序滤波器，中值对噪点有很好的抑制作用。
 
-![avatar](images/blur3.png)
+![avatar](../images/blur3.png)
   在3x3的矩阵中，我们对其进行排序，然后将中间值150替换为排序后的中位值124然后再求平均值，然后继续向后移动。如果我们将150替换为排序后的最大值或最小值，就叫做最小值滤波和最大值滤波。
 
 ```c++
@@ -97,5 +97,5 @@ void bilateralFilter( InputArray src, OutputArray dst, int d,double sigmaColor, 
  - sigmaSpace : 如果d的值大于0则声明无效，否则根据它的值来计算d值
 
 
-![avatar](images/blur4.jpg)
+![avatar](../images/blur4.jpg)
 
