@@ -100,5 +100,5 @@ void bilateralFilter( InputArray src, OutputArray dst, int d,double sigmaColor, 
 
 ### 整体效果
 
-![avatar](../images/blur4.png)
+![avatar](../images/blur.4.png)
 
