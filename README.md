@@ -1,5 +1,12 @@
 
-### OpenCv 学习示例项目
+## OpenCV 学习示例项目
+
+### 扫盲篇
+
+ - [扫盲-灰度图像](notes/Opencv05.md)
+
+
+### OpenCV
 
  - [图像混合](notes/Opencv01.md)
 
