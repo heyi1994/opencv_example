@@ -7,4 +7,6 @@
 
  - [图像模糊](notes/Opencv03.md)
 
+ - [图像的腐蚀与膨胀](notes/Opencv04.md)
+
   

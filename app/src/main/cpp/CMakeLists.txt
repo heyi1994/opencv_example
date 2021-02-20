@@ -40,6 +40,9 @@ add_library( # Sets the name of the library.
              utils/utils.cpp
              utils/utils.h
 
+             effects/swell/cv_swell.cpp
+             effects/swell/cv_swell.h
+
         )
 
 #导入头文件

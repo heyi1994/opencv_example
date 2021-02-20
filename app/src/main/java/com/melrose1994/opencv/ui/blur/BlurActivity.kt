@@ -32,9 +32,6 @@ class BlurActivity:BaseActivity<BlurUi>() {
                 getUi().dest4.setImageBitmap(bilateralFilter)
             }
         }
-
-
-
     }
 
 

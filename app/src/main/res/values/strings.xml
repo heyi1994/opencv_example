@@ -8,4 +8,9 @@
     <string name="activity_blur_2">高斯模糊:</string>
     <string name="activity_blur_3">中值模糊:</string>
     <string name="activity_blur_4">双边模糊:</string>
+
+
+    <string name="activity_swell">图片的腐蚀与膨胀</string>
+    <string name="activity_swell_dilate">膨胀:</string>
+    <string name="activity_swell_erode">腐蚀:</string>
 </resources>

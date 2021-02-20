@@ -7,7 +7,9 @@ import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.melrose1994.opencv.ui.blur.BlurActivity
+import com.melrose1994.opencv.ui.swell.SwellActivity
 import splitties.activities.start
+import splitties.dimensions.dip
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,11 +20,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         //composite()
 
         //start<ContrastActivity>()
-        start<BlurActivity>()
+        //start<BlurActivity>()
+        start<SwellActivity>()
     }
 
 
