@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.melrose1994.opencv.ui.blur.BlurActivity
+import com.melrose1994.opencv.ui.oc.OpenAndCloseActivity
 import com.melrose1994.opencv.ui.swell.SwellActivity
 import splitties.activities.start
 import splitties.dimensions.dip
@@ -24,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         //start<ContrastActivity>()
         //start<BlurActivity>()
-        start<SwellActivity>()
+        //start<SwellActivity>()
+        start<OpenAndCloseActivity>()
     }
 
 
@@ -56,8 +58,6 @@ class MainActivity : AppCompatActivity() {
             showBitmap(dest)
         }
     }
-
-
 
 
 

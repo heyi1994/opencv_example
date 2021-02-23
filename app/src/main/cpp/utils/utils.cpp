@@ -129,7 +129,6 @@ jobject createBitmap(JNIEnv *env, Mat &src, jobject &config){
 
 
 
-void putAuthorToMat(Mat &target,std::string author){
-    putText(target,author,Point(10,200),FONT_HERSHEY_SIMPLEX,3,Scalar(255,255,255),8,LINE_AA);
-
+void putAuthorToMat(Mat &target,int thickness ,int fontScale){
+    putText(target,"Melrose",Point(10,200),FONT_HERSHEY_SIMPLEX,fontScale,Scalar(255,255,255),thickness,LINE_AA);
 }

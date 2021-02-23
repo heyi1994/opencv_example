@@ -43,6 +43,10 @@ add_library( # Sets the name of the library.
              effects/swell/cv_swell.cpp
              effects/swell/cv_swell.h
 
+
+             effects/open/cv_open.cpp
+             effects/open/cv_open.h
+
         )
 
 #导入头文件

@@ -72,7 +72,7 @@ jobject createBitmap(JNIEnv *env, Mat &src, jobject &config);
 /**
  * 给图像加上名字 ;
  */
-void putAuthorToMat(Mat &target,std::string author = "Melrose");
+void putAuthorToMat(Mat &target,int thickness = 8,int fontScale = 3);
 
 
 #endif //OPENCV_EXAMPLE_UTILS_H

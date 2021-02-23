@@ -13,4 +13,11 @@
     <string name="activity_swell">图片的腐蚀与膨胀</string>
     <string name="activity_swell_dilate">膨胀:</string>
     <string name="activity_swell_erode">腐蚀:</string>
+
+
+    <string name="activity_oc">形态学操作</string>
+    <string name="activity_oc_open">开操作:</string>
+    <string name="activity_oc_close">闭操作:</string>
+    <string name="activity_oc_top_hat">顶帽:</string>
+    <string name="activity_oc_black_hat">黑帽:</string>
 </resources>
