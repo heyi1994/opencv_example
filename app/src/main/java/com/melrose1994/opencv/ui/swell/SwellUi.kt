@@ -49,7 +49,6 @@ class SwellUi(override val ctx: Context):Ui {
 
 
         add(textView {
-
             textResource = R.string.activity_swell_dilate
             textSize = 14f
         },lParams {

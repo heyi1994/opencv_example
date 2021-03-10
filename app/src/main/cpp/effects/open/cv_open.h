@@ -7,6 +7,27 @@
 
 #include "../../lib_headers.h"
 
+#include <memory>
+
+
+class Person{
+  int m_x;
+  int m_y;
+  public:
+    Person ();
+    ~Person ();
+};
+Person::Person()
+{
+    LOG_D("init");
+}
+
+Person::~Person()
+{
+    LOG_D("release");
+}
+
+
 
 extern "C"
 JNIEXPORT jobject JNICALL

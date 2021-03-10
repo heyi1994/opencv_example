@@ -96,7 +96,9 @@ class OpenAndCloseUi(override val ctx: Context):Ui {
 
         })
 
-    }.wrapInRecyclerView {  }
+    }.wrapInRecyclerView {
+
+    }
 
 
     override val root: View

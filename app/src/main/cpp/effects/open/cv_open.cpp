@@ -3,6 +3,8 @@
 // @version: 1.0.0
 //
 #include "cv_open.h"
+
+
 extern "C"
 JNIEXPORT jobject JNICALL
 Java_com_melrose1994_opencv_ui_oc_OpenAndCloseActivity_morphOpen(JNIEnv *env, jobject thiz,

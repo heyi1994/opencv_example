@@ -10,7 +10,6 @@ void gray_read_pixel(Mat & src,Mat &dest)
 {
 
 
-
     Mat gray;
     cvtColor(src,gray,CV_BGRA2GRAY);
 
