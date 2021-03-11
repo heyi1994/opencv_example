@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.melrose1994.opencv.ui.VerticaLines.VerticalLinesActivity
 import com.melrose1994.opencv.ui.blur.BlurActivity
 import com.melrose1994.opencv.ui.oc.OpenAndCloseActivity
 import com.melrose1994.opencv.ui.swell.SwellActivity
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         //start<ContrastActivity>()
         //start<BlurActivity>()
         //start<SwellActivity>()
-        start<OpenAndCloseActivity>()
+       // start<OpenAndCloseActivity>()
+        start<VerticalLinesActivity>()
     }
 
 

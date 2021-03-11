@@ -47,6 +47,10 @@ add_library( # Sets the name of the library.
              effects/open/cv_open.cpp
              effects/open/cv_open.h
 
+
+             effects/vertical_lines/cv_vertical.cpp
+             effects/vertical_lines/cv_vertical.h
+
         )
 
 #导入头文件

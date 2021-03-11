@@ -32,6 +32,9 @@
         <!--形态学操作-开闭操作-->
         <activity android:name="com.melrose1994.opencv.ui.oc.OpenAndCloseActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
 
+        <!--形态学操作-水平线-->
+        <activity android:name="com.melrose1994.opencv.ui.VerticaLines.VerticalLinesActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

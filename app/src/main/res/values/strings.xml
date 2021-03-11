@@ -20,4 +20,11 @@
     <string name="activity_oc_close">闭操作:</string>
     <string name="activity_oc_top_hat">顶帽:</string>
     <string name="activity_oc_black_hat">黑帽:</string>
+
+
+    <string name="activity_vertical_lines">形态学操作的应用-提取水平线与垂直线</string>
+    <string name="activity_vertical_lines01">二值图：</string>
+    <string name="activity_vertical_lines02">提取垂直线：</string>
+    <string name="activity_vertical_lines03">提取水平线：</string>
+
 </resources>
