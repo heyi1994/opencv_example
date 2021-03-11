@@ -50,5 +50,5 @@ void adaptiveThreshold( InputArray src, OutputArray dst,
 
 ### 整体效果
 
-![avatar](../images/lines.png)
+![avatar](../images/lines.jpg)
 
